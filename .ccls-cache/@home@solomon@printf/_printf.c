@@ -7,7 +7,6 @@
  * Return: count
  */
 
-int _printf(const char *format, ...);
 int _printf(const char *format, ...)
 {
 	int i, count = 0, val = 0;
@@ -18,7 +17,9 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
+
 	va_start(ap, format);
+
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
