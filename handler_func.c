@@ -53,7 +53,7 @@ int string_func(va_list ap)
 	{
 		count += _putch(str[i]);
 	}
-	
+
 	return (count);
 }
 
