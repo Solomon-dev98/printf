@@ -14,11 +14,12 @@ int _printf(const char *format, ...)
 
 	va_list ap;
 
-	if (format == NULL)
-	{
-		return (-1);
-	}
 	va_start(ap, format);
+
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
@@ -30,7 +31,7 @@ int _printf(const char *format, ...)
 				continue;
 			}
 			if (format[i] == 'c' || format[i] == 's'
-			|| format[i] == 'd' || format[i] == 'i')
+					|| format[i] == 'd' || format[i] == 'i')
 			{
 				val = selectformat(format[i])(ap);
 				if (val < 0)
