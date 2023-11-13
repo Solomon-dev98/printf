@@ -46,5 +46,6 @@ int _printf(const char *format, ...)
 			count += _putch(format[i]);
 		}
 	}
+	va_end(ap);
 	return (count);
 }
