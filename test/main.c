@@ -35,6 +35,5 @@ int main(void)
     printf("String:[%s]\n", "I am a string !");
     _printf("Address:[%p]\n", addr);
     printf("Address:[%p]\n", addr);
-    len = _printf("Percent:[%%]\n");
     return (0);
 }
