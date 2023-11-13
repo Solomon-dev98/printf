@@ -41,7 +41,6 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
-	len = printf("My name is %s, i am %d years old and I love %c\n", "Solomon", 45, 'C');
 	len2 = _printf("My name is %s, i am %d years old and I love %c\n", "Solomon", 45, 'C');
 	printf("lenght = %d\n", len);
 	_printf("len2 = %d\n", len2);
