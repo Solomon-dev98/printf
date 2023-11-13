@@ -10,7 +10,7 @@
 int _printf(const char *format, ...);
 int _printf(const char *format, ...)
 {
-	int i, count = 0, val = 0;
+	int i, count = 0;
 
 	va_list ap;
 
@@ -33,10 +33,7 @@ int _printf(const char *format, ...)
 			if (format[i] == 'c' || format[i] == 's'
 					|| format[i] == 'd' || format[i] == 'i')
 			{
-				val = selectformat(format[i])(ap);
-				if (val < 0)
-					return (-1);
-				count += val;
+				count += selectformat(format[i])(ap);
 			}
 			else
 			{
